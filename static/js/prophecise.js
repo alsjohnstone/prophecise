@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// **** Connect SocketIO **** //
 	// start up a SocketIO connection to the server - http(s):// needs to be set as http when run locally, and https when pushed to production.
-	var socket = io.connect('https://' + document.domain + ':' + location.port);
+	var socket = io.connect('http://' + document.domain + ':' + location.port);
 	// The callback function is invoked when a connection with the server is established.
 	socket.on('connect', function() {
 		// Successful connection message
@@ -133,7 +133,7 @@ $(document).ready(function() {
 	$('#more-forecast-options-button').on('click', function() {
 		// Refresh the app
 		$('#more-forecast-options').slideDown();
-		$('more-forecast-options-button').slideUp();
+		$('#more-forecast-options-button').hide();
 	});
 	// Show advanced GA options
 	$('#more-ga-options-button').on('click', function() {
