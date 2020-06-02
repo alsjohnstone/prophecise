@@ -1,5 +1,5 @@
 # Prophecise
-A web app that leverages Facebook Prophet, enabling marketers to create fast, robust time-series forecasts from their Google Analytics data using a simple UI.
+A web app that leverages Facebook Prophet to create robust time-series forecasts from Google Analytics data through a simple UI.
 
 ### What is Prophecise?
 
