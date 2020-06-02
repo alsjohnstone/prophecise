@@ -1,13 +1,13 @@
 # Prophecise
-A web app that leverages Facebook Prophet to create robust time-series forecasts from Google Analytics data through a simple UI.
+A web app that leverages Facebook Prophet to create fast and robust time-series forecasts from your Google Analytics data, all wrapped up in a simple to use user interface.
 
 ### What is Prophecise?
 
-<a href='https://prophecise.com'>Prophecise</a> is a web app that enables analysts and data scientists to quickly build accurate forecast models from their Google Analytics data. It builds upon the great work Gareth Cull has done with <a href="https://github.com/garethcull/forecastr">Forecastr</a>.
+<a href='https://prophecise.com'>Prophecise</a> is an open source Flask web app that enables analysts and data scientists to quickly build accurate forecast models from their Google Analytics data. It builds upon the great work Gareth Cull has been doing with <a href="https://github.com/garethcull/forecastr">Forecastr</a>.
 
 ### What is Facebook Prophet?
 
-Prophet is open source software released by Facebook’s Core Data Science team. It is a procedure for forecasting time series data and works best with time series that have strong seasonal effects and several seasons of historical data. It is available for download on CRAN and PyPI.
+Prophet is open source software released by Facebook’s Core Data Science team. It is a procedure for forecasting time series data and works best with time series that have strong seasonal effects and several seasons of historical data. It is available for download on <a href="https://cran.r-project.org/package=prophet">CRAN</a> and <a href="https://pypi.python.org/pypi/fbprophet/">PyPI</a>.
 
 ### References
 
