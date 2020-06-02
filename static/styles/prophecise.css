@@ -1,0 +1,286 @@
+/* buttons */
+
+html, body {
+    height:100%;
+}
+
+/* .btn-primary {
+    color: #696868;
+    margin-top: 1em;
+    background-color: #4e71961c;
+    border-color: #c1c1c1e3;
+    font-weight: 500;
+    /* border-width: 2px; */
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #949494;
+    border-color: #949494;
+} */
+
+/* head spacing */
+.mb-auto, .my-auto {
+    margin-bottom: 32px;
+}
+
+/* logo icon */
+#crystal-ball {
+    filter: invert(100%);
+    height: 1em;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+
+/* Google Sign-in */
+.abcRioButton{
+    margin: 0 auto;
+}
+
+#logout{
+    display:none;
+}
+
+/* steps */
+
+#one {
+    color:white;
+    box-shadow:none;
+    background-color:#ffffff00;
+}
+
+.step-title{
+    margin-bottom:1em;
+    margin-top:1em;
+}
+
+#ga-logo{
+    height: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+.tab-pane {
+    background-color: white;
+    padding: 2em;
+    border-radius: 5px;
+    text-shadow: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow: hidden;
+    color: #333333;
+    box-shadow: 7px 7px #00000030;
+
+}
+/* step animations */
+
+#myTab{
+    display:none;
+}
+
+.tab-pane.fade {
+    transition: all 0.2s;
+    transform: translateY(1rem);
+  }
+  
+  .tab-pane.fade.show {
+    transform: translateY(0rem);
+  }
+
+/* step buttons */
+#review-data{
+    float:left;
+}
+
+#generate-forecast{
+    float:right;
+}
+
+#reset, #ga-data{
+    float:left;
+}
+
+#configure-forecast{
+    float:right;
+}
+
+#download-forecast-cta{
+    float: right;
+    position: absolute;
+    top: 1.5em;
+    right: 2em;
+}
+
+#reset.reset{
+    float: left;
+    position: absolute;
+    left: 2em;
+    top: 1.5em;
+}
+/* GA selections */
+input[type="date"] {
+    background-color: transparent;
+    border: 1px solid #d0d0d0;
+    height: 2.5em;
+    padding: 6px;
+    width:60%;
+    margin-bottom:10px;
+    border-radius:3px;
+    font-size:0.8em;
+}
+
+input[type="text"] {
+    width: 60%;
+    border: 1px #d0d0d0 solid;
+    height: 2em;
+    border-radius: 3px;
+}
+
+select {
+    width: 60%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-color: #d0d0d0;
+    border-radius:3px;
+    font-size:0.8em;
+
+}
+
+label{
+    display:block;
+    font-weight: 500;
+    color: #5d5d5d;
+}
+
+#two label {
+    display: none;
+}
+
+.view-selector-label {
+    display: block;
+    font-weight: 500;
+    color: #5d5d5d;
+    margin-bottom:0.5rem;
+    margin-top:1rem;
+}
+
+/* metrics */
+
+ul {
+    text-align: justify;
+}
+ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul:before {
+    content: '';
+    display: block;
+    margin-top: -1.25em;
+}
+li {
+    display: inline-block;
+    margin-right: 2em;
+    margin-bottom:1.5em;
+    position: relative;
+    top: 1.25em;
+}
+
+#more-ga-options{
+    display:none;
+}
+
+/* days to forecast */
+
+#days-to-forecast{
+    text-align: center;
+    width: 25%;
+}
+
+/* hide logistic regression options */
+
+#logistic-regression-options {
+    display:none;
+}
+
+/* helper text */
+a.helper {
+    color:#9a9a9a;
+    font-weight:300;
+}
+
+a.helper:hover{
+    color:#5d5d5d;
+    text-decoration: none;
+    font-weight:300;
+}
+
+/* radio buttons */
+
+    input[type='radio']:after {
+        width: 17px;
+        height: 17px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 17px;
+        height: 17px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #e37400;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type="number"]{
+        width: 25%;
+        border: 1px #d0d0d0 solid;
+        height: 2em;
+        border-radius: 3px;
+        text-align:center;
+        margin-bottom:0.5em;
+
+    }
+
+    #more-forecast-options input:not([type="checkbox"]), #more-forecast-options select{
+        width:100%;
+    }
+
+    /* hide more forecast options */
+
+    #more-forecast-options{
+        display:none;
+    }
+
+/* loader gif */
+#loading{
+    margin: auto;
+}
+
+.col-sm-4 {
+    padding: 2em;
+}
+
+/* tunable arguments */
+.argument-name {
+    /* display: block; */
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #828282;
+}

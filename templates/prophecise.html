@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Prophecise</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="{{url_for('static', filename='styles/product_page.css')}}" rel="stylesheet"> 
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='styles/cover.css')}}" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MHF53M');
+    </script>
+    <!-- End Google Tag Manager -->
+
+  </head>
+
+  <body class="text-center" style="background-image: url('{{url_for('static', filename='img/bg.jpg')}}')">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MHF53M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <a href="/"><h3 class="masthead-brand"><img id='crystal-ball' src="{{url_for('static', filename='img/crystal-ball.png')}}"/>Prophecise</h3></a>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="mailto:alistair@prophecise.com">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Automated Time Series Forecasting for Google Analytics<img id="ga-logo" src="https://cdn.iconscout.com/icon/free/png-512/google-analytics-2038769-1721667.png" ></h1>
+        <p class="lead">Build fast, accurate forecast models that are fully automatic and tunable</p>
+        <p class="lead">
+          <a href="/build/" class="btn btn-lg btn-secondary">Build Forecasts</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Powered by <a href="https://facebook.github.io/prophet/docs/quick_start.html">Facebook Prophet</a> and <a href="https://github.com/garethcull/forecastr">Forecastr</a> by Alistair Johnstone.</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

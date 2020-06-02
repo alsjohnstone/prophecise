@@ -1,0 +1,26 @@
+html, body{
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* logo icon */
+#crystal-ball {
+    filter: invert(100%);
+    height: 1em;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+/* homepage cta */
+.lead {
+    margin-top: 2em;
+}
+
+#ga-logo {
+    height: 0.8em;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+    margin-left: 0.5em;
+}
