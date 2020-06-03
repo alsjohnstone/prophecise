@@ -1,7 +1,12 @@
 /* buttons */
 
-html, body {
+html, body{
     height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/static/img/bg.jpg');
+    height: auto;
 }
 
 /* .btn-primary {
@@ -10,8 +15,7 @@ html, body {
     background-color: #4e71961c;
     border-color: #c1c1c1e3;
     font-weight: 500;
-    /* border-width: 2px; */
-}
+}/*
 
 .btn-primary:hover {
     color: #fff;
