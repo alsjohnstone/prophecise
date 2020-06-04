@@ -42,6 +42,7 @@ a:hover {
 }
 
 body {
+  height:100%;
   display: -ms-flexbox;
   display: flex;
   color: #fff;

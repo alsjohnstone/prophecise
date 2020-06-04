@@ -15,7 +15,8 @@ Here are some useful links:
 
 - Facebook Prophet: https://facebook.github.io/prophet/docs/quick_start.html#python-api
 - Forecastr: https://github.com/garethcull/forecastr
-- Google Analytics: https://developers.google.com/analytics
+- Google Analytics Management API: https://developers.google.com/analytics/devguides/config/mgmt/v3
+- Google Analytics Reporting API: https://developers.google.com/analytics/devguides/reporting/core/v4
 - Flask: http://flask.pocoo.org/
 - SocketIO: https://flask-socketio.readthedocs.io/en/latest/
 - ChartJS: https://chartjs.org
