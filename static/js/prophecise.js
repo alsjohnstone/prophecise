@@ -78,7 +78,7 @@ $(document).ready(function() {
 		ga_data = ga_result_json.reports[0].data.rows.map(function(x) {
 			return {
 				Date: x.dimensions.toString(),
-				[APIMetric]: parseFloat(x.metrics[0].values)
+				[APIMetric]: parseInt(x.metrics[0].values[0])
 			}
 		})
 		console.log(ga_data)
@@ -139,7 +139,18 @@ $(document).ready(function() {
 	$('#more-ga-options-button').on('click', function() {
 		// Refresh the app
 		$('#more-ga-options').slideDown();
+		$('#ga-metrics').hide();
 		$('#more-ga-options-button').hide();
+		$('#fewer-ga-options-button').show();
+	});
+	// Hide advanced GA options
+	$('#fewer-ga-options-button').on('click', function() {
+		// Refresh the app
+		$('#more-ga-options').slideUp();
+		$('#ga-metrics').show();
+		$('#more-ga-options-button').show();
+		$('#fewer-ga-options-button').hide();
+		$('#custom-metric')[0].value = "";
 	});
 	// Back to GA button
 	$('#ga-data').on('click', function() {
@@ -278,7 +289,7 @@ $(document).ready(function() {
 		window.dataLayer.push({'event': 'Pre-forecast chart rendered'});
 		// TO DO: On click of the logistic option, unhide the upper and lower bounds or saturation points.
 		// ****** On click of the Generate Forecast CTA on Step 2 ***** //
-		$('#generate-forecast').click(function() {
+		$('#generate-forecast').unbind().click(function() {
 			/*
 
 			Background:
@@ -478,7 +489,7 @@ $(document).ready(function() {
 		// ************ Original Dataset Shape ***************** //
 		var original_dataset = arr[6]
 		// ************ STEP 3: UPDATE CHART CTA CLICK - RIGHT SIDE-NAV BAR ***************** //
-		$('#update-chart').click(function() {
+		$('#update-chart').unbind().click(function() {
 			/*
 
 			Background:
@@ -513,15 +524,17 @@ $(document).ready(function() {
 			var forecast_settings_list = [u_model_type, u_forecast_length, u_capacity, u_min_saturation, u_seasonality_mode, u_seasonality_prior_scale, selected_seasonality, u_n_changepoints, changepoints_prior_scale]
 			updated_forecast_settings = [original_data, forecast_settings_list, column_headers, freq, original_dataset];
 			console.log(updated_forecast_settings);
+			console.log('Build settings');
 			// Emit updated forecast settings and data back to be processed and fit another Prophet model
 			socket.emit('update_chart_settings', {
 				data: updated_forecast_settings
 			});
+			myChart.destroy();
 			// ****** GOOGLE ANALYTICS EVENT ****** //
 			// Send an event to the data layer signifying that the Update Chart CTA has been clicked.
 			window.dataLayer.push({'event': 'Update forecast CTA'});
 			// Hide chart when processing data and display loading gif
-			myChart.destroy()
+
 			$('#myChart').css({
 				display: "none"
 			});
@@ -534,7 +547,7 @@ $(document).ready(function() {
 			// IMPORTANT: Set data_for_csv_export to blank so not to store multiple csvs for download.
 			data_for_csv_export = '';
 		}); // end of update-chart function
-		$('#reset-button').on('click', function() {
+		$('#reset').on('click', function() {
 			/*
 
 			Background:

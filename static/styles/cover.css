@@ -115,3 +115,9 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+#privacy-policy{
+    color:rgb(78, 78, 78);
+    text-decoration: none;
+    font-size: 0.8em;
+}

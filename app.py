@@ -48,6 +48,10 @@ def index():
 def about():
     return render_template('prophecise.html') # Product Page
 
+@app.route('/privacy/')
+def privacy():
+    return render_template('privacy.html') # Product Page
+
 
 @socketio.on('connection_msg')
 def connected(message):

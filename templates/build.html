@@ -28,7 +28,7 @@
       <!-- End Google Tag Manager -->
       <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/date-range-selector.js"></script>
       <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/view-selector2.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
       <title>Prophecise | Automated forecasting for Google Analytics</title>
       <!-- Bootstrap core CSS -->
       <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -89,7 +89,7 @@
                <div id="date-range-selector-2-container"></div>
                <p class="view-selector-label">Forecast Metric</p>
                <select name="metrics" id="ga-metrics">
-                  <option value="ga:sessionsPerUser">Sessions</option>
+                  <option value="ga:sessions">Sessions</option>
                   <option value="ga:users">Users</option>
                   <option value="ga:sessionsPerUser">Number of Sessions per User</option>
                   <option value="ga:avgSessionDuration">Avg. Session Duration</option>
@@ -115,9 +115,9 @@
                   <option value="ga:bounces">Bounces</option>
                   <option value="ga:bounceRate">Bounce Rate</option>
                </select>
-               <br>
-               <a class="helper" href="#" id="more-ga-options-button">Show more options</a>
-               <br>
+               <div id="more-ga-options-button">
+                  <a class="helper" href="#">Show more options</a>
+               </div>
                <div id="more-ga-options">
                   <p class="view-selector-label">Use different forecast metric <a class="helper" href="https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/"> (ga:metricName)</a></p>
                   <input id="custom-metric" type="text">
@@ -126,6 +126,10 @@
                   <select id="custom-segment">
                      <option value="" disabled>Choose your segment</option>
                   </select>
+               </div>
+               <div id="fewer-ga-options-button" style="display:none">
+                  <a class="helper" href="#">Show less options</a>
+                  <br>
                </div>
                <br>
                <button id="review-ga-data" type="button" class="btn btn-primary">Review GA Data</button>
@@ -389,8 +393,7 @@
          ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
-      <!-- Google Sign In Script -->
-      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
       <script type="text/javascript" src="{{url_for('static', filename='js/prophecise.js')}}" ></script>
    </body>
 </html>
