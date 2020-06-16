@@ -63,6 +63,8 @@ def connected(message):
 @socketio.on('forecast_settings')
 def forecast_settings(message):
 
+    print(type(message))
+
     # Initial forecast settings - the first time the user sends forecast settings through the app - will use this value in forecastr method
     build_settings = 'initial'
 
