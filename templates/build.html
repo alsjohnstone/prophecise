@@ -329,6 +329,7 @@
                      
                      <div id="more-forecast-options">
                       <h5>Tune your forecast</h5>
+                      <p>See Prophet's <a href="https://facebook.github.io/prophet/docs/quick_start.html">documentation</a> for more details on parameter tuning.</p>
                       <div class="row">
                         <div class="col-sm-4">
                            <h6 class='param-header'>Growth</h6>
@@ -336,33 +337,34 @@
                            <input class='num-field' id="forecast-length" type="number"><br>
                            <span class='argument-name'>Model</span>
                            <select class='dd-menu' placeholder='Model Type' id='arg-forecast-model'>
-                              <option value="" selected disabled>Model Type</option>
-                              <option value="linear">Linear</option>
+                              <option value="linear" selected>Linear</option>
                               <option value="logistic">Logistic</option>
                            </select>
                            <br>
+                        <div id="logistic-limits" style="display:none">
                            <span class='argument-name'>Upper Limit</span><br>
-                           <input class='num-field' id="update-capacity" type="number">
+                           <input class='num-field' id="update-capacity" type="number" min="0" step="1">
                            <span class='argument-name'>Lower Limit</span><br>
-                           <input class='num-field' id="update-min-saturation" type="number">
+                           <input class='num-field' id="update-min-saturation" type="number" min="0" step="1">
+                        </div>
                         </div>
                         <div class="col-sm-4">
                            <h6 class='param-header'>Seasonality</h6>
                            <span class='argument-name'>Mode</span><br>
                            <select class='dd-menu' id='arg-seasonality-mode'>
-                              <option value="" selected disabled>Seasonality Mode</option>
-                              <option value="additive">Additive (default)</option>
+                              <option value="additive" selected>Additive (default)</option>
                               <option value="multiplicative">Multiplicative</option>
                            </select>
                            <br>
+                        <div id="seasonality-options">
                            <span class='argument-name'>Seasonality Prior Scale</span><br>
-                           <input class='num-field' id="seasonality-prior-scale" type="number">
+                           <input class='num-field' id="seasonality-prior-scale" type="number" placeholder="0.5 (default)">
                            <span class='argument-name'>Seasonality Type</span>
                            <br>
                            <input type="checkbox" name="seasonality_type" value="weekly_seasonality"> Daily<br>
                            <input type="checkbox" name="seasonality_type" value="weekly_seasonality"> Weekly<br>
                            <input type="checkbox" name="seasonality_type" value="yearly_seasonality"> Yearly<br>
-                           
+                        </div>
 
                         </div>
                         <div class="col-sm-4">
@@ -395,5 +397,6 @@
       <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
 
       <script type="text/javascript" src="{{url_for('static', filename='js/prophecise.js')}}" ></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/form-helper.js')}}" ></script>
    </body>
 </html>

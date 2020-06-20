@@ -7,7 +7,7 @@ from flask_socketio import SocketIO, emit
 import time
 
 
-def forecastr(data,forecast_settings,column_headers,freq_val,build_settings):
+def prophecise(data,forecast_settings,column_headers,freq_val,build_settings):
 
     """
     Background: This function will take the data from the csv and forecast out x number of days.

@@ -8,7 +8,7 @@ import requests
 from datetime import datetime
 from fbprophet import Prophet
 import pandas as pd
-from helper_v4 import forecastr,determine_timeframe,get_summary_stats,validate_model,preprocessing
+from helper_v4 import prophecise,determine_timeframe,get_summary_stats,validate_model,preprocessing
 import logging
 import time
 import os
@@ -63,8 +63,6 @@ def connected(message):
 @socketio.on('forecast_settings')
 def forecast_settings(message):
 
-    print(type(message))
-
     # Initial forecast settings - the first time the user sends forecast settings through the app - will use this value in forecastr method
     build_settings = 'initial'
 
@@ -94,7 +92,7 @@ def forecast_settings(message):
     y = time_series_data[metric].tolist()
 
     # Use Facebook Prophet through forecastr method
-    forecast = forecastr(time_series_data,forecast_settings,column_headers,freq,build_settings)
+    forecast = prophecise(time_series_data,forecast_settings,column_headers,freq,build_settings)
 
     # Need to convert forecast back into a list / array for y, y_hat and date so it can be properly graphed with chartjs
     y_hat = forecast[0]
@@ -159,7 +157,7 @@ def update_chart(message):
     y = time_series_data[metric].tolist()
 
     # Use Facebook Prophet through forecastr method
-    forecast = forecastr(time_series_data,forecast_settings,column_headers,freq,build_settings)
+    forecast = prophecise(time_series_data,forecast_settings,column_headers,freq,build_settings)
 
     # Need to convert forecast back into a list / array for y, y_hat and date so it can be properly graphed with chartjs
     y_hat = forecast[0]
