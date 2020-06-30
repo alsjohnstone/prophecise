@@ -5,7 +5,9 @@ A web app that leverages Facebook Prophet to create fast and robust time-series 
 
 <a href='https://prophecise.com'>Prophecise</a> is an open source Flask web app that enables analysts and data scientists to quickly build accurate forecast models from their Google Analytics data. It builds upon the great work Gareth Cull has been doing with <a href="https://github.com/garethcull/forecastr">Forecastr</a>. Here's an overview of the data flow:
 
+<br>
 <img src="https://alsjohnstone.com/assets/images/prophecise-data-flow.jpg"/>
+<br>
 
 ### What is Facebook Prophet?
 
