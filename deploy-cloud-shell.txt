@@ -1,3 +1,11 @@
+## Deploy using Google Cloud Shell
 git clone https://github.com/alsjohnstone/prophecise
 cd prophecise
 gcloud run deploy --source . --timeout=1800
+
+
+## Build and test locally
+git clone https://github.com/alsjohnstone/prophecise
+cd prophecise
+docker build -t prophecise .
+docker run --publish 8000:8000 prophecise
