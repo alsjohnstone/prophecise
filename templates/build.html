@@ -29,8 +29,8 @@
         })(window,document,'script','dataLayer','GTM-5MHF53M');
       </script>
       <!-- End Google Tag Manager -->
-      <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/date-range-selector.js"></script>
-      <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/view-selector2.js"></script>
+      <script src="{{url_for('static', filename='js/date-range-selector.js')}}"></script>
+      <script src="{{url_for('static', filename='js/view-selector2.js')}}"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
       <title>Prophecise | Automated forecasting for Google Analytics</title>
       <!-- Bootstrap core CSS -->
@@ -147,6 +147,8 @@
                      */
                     gapi.analytics.auth.authorize({
                       container: 'embed-api-auth-container',
+                      // dev: 135647738684-4tq9guuac9fo1q9f300ectka8lrihma2.apps.googleusercontent.com
+                      // live: 135647738684-srgslml86mqoj9jqf5u5j16j4p18e45t.apps.googleusercontent.com
                       clientid: '135647738684-srgslml86mqoj9jqf5u5j16j4p18e45t.apps.googleusercontent.com'
                     });
                   
@@ -267,6 +269,7 @@
                         <li class='helpful-title min'>Min<br><span id='metrics-min' class='summary-data'>--</span></li>
                         <li class='helpful-title max'>Max<br><span id='metrics-max' class='summary-data'>--</span></li>
                      </ol>
+                     <br>
                      <div id='user-messaging'>
                         <p id='error-message'></p>
                         <button id="ga-data" type="button" class="btn btn-primary" href="#">Back</button>

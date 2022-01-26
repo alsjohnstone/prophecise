@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// **** Connect SocketIO **** //
 	// start up a SocketIO connection to the server - http(s):// needs to be set as http when run locally, and https when pushed to production.
-	var socket = io.connect('https://' + document.domain + ':' + location.port);
+	var socket = io.connect('http://' + document.domain + ':' + location.port);
 	// The callback function is invoked when a connection with the server is established.
 	socket.on('connect', function() {
 		// Successful connection message
@@ -439,11 +439,11 @@ $(document).ready(function() {
 				datasets: [{
 					label: 'Forecast',
 					data: forecast,
-					borderWidth: 1,
+					borderWidth: 2,
 					fill: false,
 					pointRadius: 0,
-					backgroundColor: "#e37400",
-					borderColor: '#e37400',
+					backgroundColor: "#F9AB00",
+					borderColor: '#E37400',
 					borderWidth: 2
 				}, {
 					label: 'Actuals',
@@ -459,7 +459,9 @@ $(document).ready(function() {
 				scales: {
 					yAxes: [{
 						ticks: {
-							beginAtZero: true
+							beginAtZero: true,
+							suggestedMin: 1,
+							suggestedMax: 20
 						}
 					}]
 				},
