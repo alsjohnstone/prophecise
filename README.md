@@ -7,15 +7,15 @@ A web app that leverages Facebook Prophet to create fast and robust time-series 
 
 ### What is Prophecise?
 
-<a href='https://prophecise.com'>Prophecise</a> is an open source Flask web app that enables analysts and data scientists to quickly build accurate forecast models from their Google Analytics data. It builds upon the great work Gareth Cull has been doing with <a href="https://github.com/garethcull/forecastr">Forecastr</a>. It lets users sign in with their Google Analytics account and pull reports directly into the UI for forecasting. Here's an overview of the data flow:
+Prophecise is an open source Flask web app that enables analysts and data scientists to quickly build accurate forecast models from their Google Analytics data. It builds upon the great work Gareth Cull has been doing with <a href="https://github.com/garethcull/forecastr">Forecastr</a>. It lets users sign in with their Google Analytics account and pull reports directly into the UI for forecasting. Here's an overview of the data flow:
 
 <br>
-<img src="https://alsjohnstone.com/assets/images/prophecise-data-flow.jpg"/>
+<img src="http://alsjohnstone.com/assets/images/prophecise-data-flow.jpg"/>
 <br>
 
 ### What is Facebook Prophet?
 
-Prophet is open source software released by Facebook’s Core Data Science team. It is a procedure for forecasting time series data and works best with time series that have strong seasonal effects and several seasons of historical data. It is available for download on <a href="https://cran.r-project.org/package=prophet">CRAN</a> and <a href="https://pypi.python.org/pypi/fbprophet/">PyPI</a>.
+Prophet is open source software released by Facebook’s Core Data Science team. It is a procedure for forecasting time series data and works best with time series that have strong seasonal effects and several seasons of historical data. It is available for download on <a href="https://cran.r-project.org/package=prophet">CRAN</a> and <a href="http://pypi.python.org/pypi/fbprophet/">PyPI</a>.
 
 ### References
 
