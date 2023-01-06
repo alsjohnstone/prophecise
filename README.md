@@ -2,7 +2,7 @@
 A web app that leverages Facebook Prophet to create fast and robust time-series forecasts from your Google Analytics data using a simple UI.
 
 <br>
-<img src="https://alsjohnstone.com/assets/images/screely-1592742794169.png"/>
+<img src="http://alsjohnstone.com/assets/images/screely-1592742794169.png"/>
 <br>
 
 ### What is Prophecise?
